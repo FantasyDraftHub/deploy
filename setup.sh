@@ -12,12 +12,12 @@ if [ "$#" -lt 1 ]
 fi
 
 which_script=$1
-if [[ ${which_script} =~ ui|api|redis ]]
+if [[ ${which_script} =~ ui|api ]]
   then
     echo 'Creating the deploy user'
     sh ./setup_deploy_user.sh
-    echo "Setting up Echo $which_script"
-    cd "echo${which_script}"
+    echo "Setting up API $which_script"
+    cd "${which_script}"
     sh ./setup.sh
 else
     echo 'Invalid option, exiting now.'
