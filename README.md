@@ -19,7 +19,7 @@ git pull
 
 # On your local machine
 
-# cd $ECHOAPI_ROOT
+# cd $API_ROOT
 bundle exec cap development deploy
 ```
 
@@ -38,6 +38,6 @@ git pull
 exit
 exit
 
-# cd $ECHOUI_ROOT
+# cd $UI_ROOT
 BUILD_ENV=review bundle exec cap development deploy
 ```
